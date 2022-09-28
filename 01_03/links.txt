@@ -1,0 +1,5 @@
+https://github.com/Abdulganiev/DE_1t/blob/main/01_03/task%2001_03.ipynb
+
+а также когда то анализировал hh.ru через api
+
+https://github.com/Abdulganiev/HH/blob/main/DE.ipynb
