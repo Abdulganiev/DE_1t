@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+  int n, m = 0;
+  cout << "Введите число = ";
+  cin >> n;
+
+  do
+  {
+    if ( (n % 10) > m )
+    {
+        m = n % 10;
+    }
+    n = n / 10;
+  }
+
+  while (n != 0);
+  std::cout<< "Максимальное число = " << m <<"\n";
+  std::cout<< "Конец программы\n";
+  return 0;
+}

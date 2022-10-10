@@ -1,0 +1,35 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main()
+{
+  double a,b,c,D,x1,x2;
+ 
+  cout << "Введите a = ";
+  cin >> a;
+  cout << "Введите b = ";
+  cin >> b;
+  cout << "Введите c = ";
+  cin >> c;
+ 
+  D = (b * b) - (4 * a * c);
+  if(D > 0)
+  {
+    x1 = ((-b) + sqrt(D)) / (2 * a);
+    x2 = ((-b) - sqrt(D)) / (2 * a);
+    std::cout << "x1 = " << x1 << "\n";
+    std::cout << "x2 = " << x2 << "\n";
+  }
+  else if(D == 0)
+  {
+    x1 = -(b / (2 * a));
+    std::cout << "x1 = x2 = " << x1 << "\n";
+  }
+  else if(D < 0) // Условие при дискриминанте меньше нуля
+  {
+    std::cout << "D < 0, Действительных корней уравнения не существует" << D << "\n";
+  }
+  std::cout<<"Конец программы\n";
+  return 0;
+}

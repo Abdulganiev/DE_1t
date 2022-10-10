@@ -1,0 +1,14 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+  int n = 1;
+  while (n != 11)
+  {
+      std::cout<< n << "*" << n << "=" << n * n << "\n";
+      n++;
+  }
+  std::cout<<"Конец программы\n";
+  return 0;
+}

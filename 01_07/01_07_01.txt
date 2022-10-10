@@ -1,0 +1,27 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+  float a, b;
+  cout << "Введите число A = ";
+  cin >> a;
+  cout << "Введите число B = ";
+  cin >> b;
+  if(a>b)
+  {
+      std::cout<<"Число А больше B\n";
+  }
+  else if(a<b)
+  {
+      std::cout<<"Число B больше A\n";
+  }
+  else
+  {
+      std::cout<<"Число A равно B\n";
+  }
+  
+  std::cout<<"Конец программы\n";
+  return 0;
+}

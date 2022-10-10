@@ -1,0 +1,12 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+  for (int n = 1; n != 11; n++)
+  {
+      std::cout<< n << " * " << n << " = " << n * n << "\n";
+  }
+  std::cout<<"Конец программы\n";
+  return 0;
+}

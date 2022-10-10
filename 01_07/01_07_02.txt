@@ -1,0 +1,25 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+  int year;
+  cout << "Введите год = ";
+  cin >> year;
+  if((year%400)==0) 
+  {
+      std::cout<<"год високосный\n";
+  }
+  else if((year%400)==0 and (year%100)!=0)
+  {
+      std::cout<<"год високосный\n";
+  }
+  else
+  {
+      std::cout<<"год не високосный\n";
+  }
+  
+  std::cout<<"Конец программы\n";
+  return 0;
+}
