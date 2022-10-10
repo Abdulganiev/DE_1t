@@ -1,0 +1,5 @@
+MapReduce или подсчеты за пределами возможностей памяти и процессора (https://habr.com/ru/post/103467/)
+MapReduce Tutorial (https://hadoop.apache.org/docs/r1.2.1/mapred_tutorial.html)
+Туториал: параллельные вычисления больших данных с MapReduce (https://neurohive.io/ru/tutorial/mapreduce/)
+MapReduce (https://ru.bmstu.wiki/MapReduce)
+Технология google mapreduce: разделяй и властвуй (https://www.computerra.ru/183360/mapreduce/)
