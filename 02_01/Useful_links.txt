@@ -1,0 +1,33 @@
+1. Apache Atlas 2018. Apache Atlas: Data Governance and Metadata framework for Hadoop. http://atlas.apache.org/
+
+2. Apache Calcite 2018. Apache Calcite: Dynamic data management framework. http://calcite.apache.org/
+
+3. Apache Druid 2018. Apache Druid: Interactive analytics at scale. http://druid.io/
+
+4. Apache Flink 2018. Apache Flink: Stateful Computations over Data Streams. http://flink.apache.org/
+
+5. Apache HBase 2018. Apache HBase. http://hbase.apache.org/
+
+6. Apache Hive 2018. Apache Hive. http://hive.apache.org/
+
+7. Apache Impala 2018. Apache Impala. http://impala.apache.org/
+
+8. Apache Kafka 2018. Apache Kafka: A distributed streaming platform. http://kafka.apache.org/
+
+9. Apache ORC 2018. Apache ORC: High-Performance Columnar Storage for Hadoop. http://orc.apache.org/
+
+10. Apache Parquet 2018. Apache Parquet. http://parquet.apache.org/
+
+11. Apache Ranger 2018. Apache Ranger: Framework to enable, monitor and manage comprehensive data security across the Hadoop platform. http://ranger.apache.org/
+
+12. Apache Sentry 2018. Apache Sentry: System for enforcing fine grained role based authorization to data and metadata stored on a Hadoop cluster. http://sentry.apache.org/
+
+13. Apache Spark 2018. Apache Spark: Unified Analytics Engine for Big Data. http://spark.apache.org/
+
+14. Apache Tez 2018. Apache Tez. http://tez.apache.org/
+
+15. Apache Thrift 2018. Apache Thrift. http://thrift.apache.org/
+
+16. Azure SQL DW 2018. Azure SQL Data Warehouse. http://azure.microsoft.com/en-us/services/sql-data-warehouse/
+
+17. BigQuery 2018. BigQuery: Analytics Data Warehouse. http://cloud.google.com/bigquery/
