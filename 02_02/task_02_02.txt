@@ -1,0 +1,145 @@
+Практическая работа № 2.2 «Конвеер данных Kafka».
+
+В предлагаемой практике рассматривается основные принципы работы  и инструменты мониторинга для  Kafka.
+
+Установка дополнительных библиотек.
+
+Для успешной работы с  Kafka потребуется установить дополнительное ПО на вашем компьютере. 
+Переходим по ссылке https://www.docker.com/ и устанавливаем предлагаемый инструмент в зависимости от вашей операционной системы (обратите внимание! Выберите операционную систему).
+
+Вызываем командную строку на Windows cmd или терминал на (Linux, MacOS)
+
+Проверяем успешную установку Docker: docker --version.
+
+В результате должно получиться что то похожее: Docker version 17.03.1-ce-rc1, build 3476dbf
+
+
+Также для мониторинга kafka потребуется kafkacat:
+
+sudo apt update
+
+sudo apt install kafkacat
+
+
+
+Задание.
+
+1. Создание исполняемого файла докер композер
+
+а. Создаем директорию kafka
+
+  windows: md kafka
+
+  ubuntu: mkdir kafka
+
+б. В заданной директории kafka: создаем файл  docker-compose.yml      со следующим содержимым:
+
+
+---
+
+version: '3'
+
+services:
+
+  zookeeper:
+
+    image: confluentinc/cp-zookeeper:7.0.1
+
+    container_name: zookeeper
+
+    environment:
+
+      ZOOKEEPER_CLIENT_PORT: 2181
+
+      ZOOKEEPER_TICK_TIME: 2000
+
+
+  broker:
+
+    image: confluentinc/cp-kafka:7.0.1
+
+    container_name: broker
+
+    ports:
+
+    # To learn about configuring Kafka for access across networks see
+
+    # https://www.confluent.io/blog/kafka-client-cannot-connect-to-broker-on-aws-on-docker-etc/
+
+      - "9092:9092"
+
+    depends_on:
+
+      - zookeeper
+
+    environment:
+
+      KAFKA_BROKER_ID: 1
+
+      KAFKA_ZOOKEEPER_CONNECT: 'zookeeper:2181'
+
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,PLAINTEXT_INTERNAL:PLAINTEXT
+
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://localhost:9092,PLAINTEXT_INTERNAL://broker:29092
+
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+
+      KAFKA_TRANSACTION_STATE_LOG_MIN_ISR: 1
+
+      KAFKA_TRANSACTION_STATE_LOG_REPLICATION_FACTOR: 1
+
+ 
+
+2. Старт Kafka broker
+
+В директории, содержащей файл docker-compose.yml, созданный на предыдущем шаге, запустите команду, чтобы запустить все службы в заданном порядке:
+
+команда: docker-compose up -d
+
+ 
+
+2. Старт Kafka broker
+
+команда: docker exec broker kafka-topics --bootstrap-server broker:9095 --create --topic test_first
+
+ 
+
+3. Заполнение топика сообщением
+
+команда: docker exec --interactive --tty broker kafka-console-producer --bootstrap-server broker:9095 --topic test_first
+
+После запуска команды напишите любой текст, который желаете передать в сообщении. Например:
+
+Это мой первый подход к Кафке.
+
+Посмотрим что это за зверь
+
+Альтернативныйвариант: kafkacat -b localhost:9095 -t test -P
+
+ 
+
+4. Чтение сообщений из kafka
+
+После того как мы записали сообщение в тему запустите эту команду для того чтобы увидеть содержимое сообщения:
+
+команда: docker exec --interactive --tty broker kafka-console-consumer --bootstrap-server broker:9095 --topic test_first --from-beginning
+
+Вы должны увидеть набранный вами текст
+
+Альтернативный вариант: kafkacat -b localhost:9095 -t test_first -C
+
+ 
+
+5.Остановите kafka broker
+
+команда: docker-compose down
+
+ 
+
+Задача для желающих узнать больше.
+
+Аналогичную процедуру можно реализовать через специальную библиотеку KafkaConsumer
+
+1. Выполняем пункты 1 и 2 из предыдущих заданий. Устанавливаем
+
+Следующим шагом необходимо запустить пример питон скрипта, представленном по ссылке ( https://kafka-python.readthedocs.io/en/master/usage.html ), предварительно сконфигурировав порт и название вашего топика, который вы собираетесь слушать/мониторить.
