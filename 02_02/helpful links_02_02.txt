@@ -1,5 +1,0 @@
-Объяснение Kafka на примерах из Factorio (https://habr.com/ru/company/dcmiran/blog/591785/)
-Документация Kafka (https://kafka.apache.org/documentation/)
-Kafka, Python и золотая рыбка (https://habr.com/ru/post/587592/)
-Apache Kafka. Безопасность, мониторинг и управление кластером (https://habr.com/ru/company/nsd/blog/661007/)
-Monitoring Kafka (https://docs.confluent.io/platform/current/kafka/monitoring.html#monitoring-ak)
