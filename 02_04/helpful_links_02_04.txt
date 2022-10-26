@@ -1,0 +1,4 @@
+1. HDFS. Основные концепции и структура (https://www.codeinstinct.pro/2012/08/hdfs-design.html?m=1)
+2. Официальная документация от Hadoop: (https://hadoop.apache.org/docs/r1.2.1/hdfs_design.html)
+3. Команды HDFS Shell: (https://hadoop.apache.org/docs/r2.4.1/hadoop-project-dist/hadoop-common/FileSystemShell.html)
+4. Материалы по Object Storage (Yandex Cloud): (https://cloud.yandex.ru/docs/storage/ https://cloud.yandex.ru/docs/storage/concepts/object)
