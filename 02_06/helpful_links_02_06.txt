@@ -1,0 +1,5 @@
+1. WEKA. Руководство по использованию (https://habr.com/ru/post/590565/)
+2. Data Quality: новые правила (https://habr.com/ru/company/vk/blog/674830/)
+3. Анализ данных (ссылка) 
+4. Предварительная обработка данных (ссылка)
+5. Обзор Knime Analytics Platform — open source системы для анализа данных (https://habr.com/ru/post/320500/)
